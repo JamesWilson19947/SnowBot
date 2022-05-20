@@ -3,10 +3,10 @@ const wait = require('node:timers/promises').setTimeout;
 const request = require('request');
 
 module.exports = {
-	data: new SlashCommandBuilder()
-		.setName('bored')
-		.setDescription('suggests an activity if your bored'),
-	async execute(interaction) {
+    data: new SlashCommandBuilder()
+        .setName('bored')
+        .setDescription('suggests an activity if your bored'),
+    async execute(interaction) {
         request.get(
             'https://www.boredapi.com/api/activity',
             { json: { key: 'value' } },
@@ -19,5 +19,5 @@ module.exports = {
                 }
             }
         );
-	},
+    },
 };

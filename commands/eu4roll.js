@@ -2,10 +2,10 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageActionRow, MessageSelectMenu } = require('discord.js');
 
 module.exports = {
-	data: new SlashCommandBuilder()
-		.setName('eu4roll')
-		.setDescription('A command to roll a random EU4 nation. <europe/asia/africa>'),
-	async execute(interaction) {
+    data: new SlashCommandBuilder()
+        .setName('eu4roll')
+        .setDescription('A command to roll a random EU4 nation. <europe/asia/africa>'),
+    async execute(interaction) {
         const row = new MessageActionRow()
         .addComponents(
             new MessageSelectMenu()
@@ -29,6 +29,6 @@ module.exports = {
                     }
                 ]),
         );
-		await interaction.reply({ content: 'Select your region', components: [row] });
-	},
+        await interaction.reply({ content: 'Select your region', components: [row] });
+    },
 };

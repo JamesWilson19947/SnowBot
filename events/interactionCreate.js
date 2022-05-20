@@ -1,6 +1,6 @@
 module.exports = {
-	name: 'interactionCreate',
-	execute(interaction) {
-		console.log(`${interaction.user.username} in #${interaction.channel.name} triggered a ${interaction.type}.`);    
-	},
+    name: 'interactionCreate',
+    execute(interaction) {
+        console.log(`${interaction.user.username} in #${interaction.channel.name} triggered a ${interaction.type}.`);    
+    },
 };
