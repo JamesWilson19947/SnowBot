@@ -13,22 +13,27 @@ module.exports = {
                 .setPlaceholder('Nothing selected')
                 .addOptions([
                     {
+                        label: 'Major Powers',
+                        description: 'A random major power',
+                        value: 'major',
+                    },
+                    {
                         label: 'Europe',
-                        description: 'This is a description',
+                        description: 'A minor nation in Europe.',
                         value: 'europe',
                     },
                     {
                         label: 'Asia',
-                        description: 'This is also a description',
+                        description: 'A minor nation in Asia',
                         value: 'asia',
                     },
                     {
                         label: 'Africa',
-                        description: 'This is also a description',
+                        description: 'A minor nation in Africa',
                         value: 'africa',
                     }
                 ]),
         );
-        await interaction.reply({ content: 'Select your region', components: [row] });
+        await interaction.reply({ content: 'Select your region', components: [row], ephemeral: true  });
     },
 };
